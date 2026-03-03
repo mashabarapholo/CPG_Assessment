@@ -53,9 +53,9 @@ BONUS FEATURES:
 - [BONUS] Remember Me: Saves username to remembered_user.txt (persists restarts)
 - [BONUS] Login Audit Log: All events saved to login_audit.txt in the app folder
 
-====================================================
+=================================================
 CODE STRUCTURE
-====================================================
+=================================================
 Program.cs           - Application entry point
 LoginForm.cs         - Main login UI and event handling
 DashboardForm.cs     - Post-login welcome screen
