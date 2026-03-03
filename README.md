@@ -1,83 +1,60 @@
-# CPG_Assessment
-Capital Peak Group - C# Intern Development Test   Login Application - README
+🚀 How To Run
+Environment: Open the solution in Visual Studio 2019 or later.
 
-====================================================
+Project File: Open LoginApp.sln.
 
-HOW TO RUN
-----------
-1. Open Visual Studio (2019 or later recommended).
-2. Open the solution file: LoginApp.sln
-3. Build the solution (Ctrl+Shift+B).
-4. Press F5 to run.
+Compile: Build the solution using Ctrl+Shift+B.
 
-Requirements: .NET Framework 4.7.2 (pre-installed on most Windows machines).
-No external NuGet packages required - hashing uses built-in System.Security.Cryptography.
+Execute: Press F5 to run the application.
 
- ====================================================
-TEST CREDENTIALS
-Username     | Password
--------------|-------------
-admin        | Admin@246
-mary         | Mary#456
-Mashaba77    | Mash$AI7
-Daniel       | Daniel@1
+Note: Requires .NET Framework 4.7.2. No external NuGet packages are required as hashing uses built-in cryptography libraries.
 
-Note: Passwords are CASE-SENSITIVE.
-Note: Passwords are stored as salted SHA256 hashes - plaintext is never stored.
+🔐 Test Credentials
+Passwords are case-sensitive and stored as salted SHA256 hashes; plaintext is never stored.
 
- ====================================================
-FEATURES IMPLEMENTED
+✨ Features
+Core Functionality
+Secure Login: Username and password authentication.
 
-CORE FEATURES:
-- Login Form with username/password fields
-- Show/Hide password toggle (checkbox)
-- Input validation:
-    * Empty field detection
-    * Username: 3-15 chars, alphanumeric + underscore only
-    * Password: min 6 chars, must have uppercase, lowercase, digit, special char
-    * No leading/trailing whitespace in password
-- Account Lockout after 3 failed attempts
-- Remaining attempts warning shown after each failure
-- Locked accounts show clear error immediately (no credential check)
-- Successful login resets the failed attempt counter
-- Post-login Dashboard with welcome message + date/time
-- Logout button returns to login screen and clears session
+UI Controls: Show/Hide password toggle via checkbox.
 
-BONUS FEATURES:
-- [BONUS] Admin Unlock Screen: Click "Admin Unlock Account" on login screen.
-  Admin password: CPGroup_Admin@2024
-- [BONUS] Password Hashing (SHA256 + Salt): Passwords NEVER stored as plaintext.
-  Each password is hashed with a random 128-bit salt using SHA256.
-  Constant-time comparison prevents timing attacks. See PasswordHasher.cs.
-- [BONUS] Remember Me: Saves username to remembered_user.txt (persists restarts)
-- [BONUS] Login Audit Log: All events saved to login_audit.txt in the app folder
+Strict Input Validation:
 
-=================================================
-CODE STRUCTURE
+Detection of empty fields.
 
-Program.cs           - Application entry point
-LoginForm.cs         - Main login UI and event handling
-DashboardForm.cs     - Post-login welcome screen
-AdminUnlockForm.cs   - Admin account unlock screen (Bonus)
-AuthService.cs       - Credential store and authentication logic
-PasswordHasher.cs    - SHA256 + salt hashing and verification (Bonus)
-ValidationHelper.cs  - All input validation rules (separate concern)
-SessionState.cs      - Failed attempt tracking and lockout state
-AuditLogger.cs       - Writes login events to login_audit.txt (Bonus)
-RememberMeHelper.cs  - Saves/loads remembered username (Bonus)
-LoginApp.csproj      - Project configuration
-LoginApp.sln         - Visual Studio solution file
+Username: 3-15 characters, alphanumeric and underscores only.
 
-# ====================================================
-DESIGN DECISIONS
+Password: Minimum 6 characters, requiring uppercase, lowercase, digits, and special characters.
 
-- Validation logic is kept in ValidationHelper.cs (separate from UI),
-  following separation of concerns principle.
-- SessionState uses static dictionaries to maintain lockout state for
-  the entire session without requiring a database.
-- AuthService uses a Dictionary<string, string> for the credential store
-  as the minimum required approach. This can be swapped for SQLite by
-  replacing the Authenticate() method.
-- PascalCase used for all methods and class names; camelCase for locals.
-- No magic numbers - MaxAttempts and AdminPassword are constants.
-====================================================
+Prevention of leading/trailing whitespace in passwords.
+
+Account Lockout Policy:
+
+Automatic lockout after 3 failed attempts.
+
+Real-time warning of remaining attempts after each failure.
+
+Immediate error messaging for locked accounts.
+
+Successful login resets the attempt counter.
+
+Post-Login Experience: Dashboard featuring a welcome message, current date/time, and a logout button that clears the session.
+
+[BONUS] Advanced Features
+Admin Unlock Screen: Provides a bypass to unlock accounts using the admin password: CPGroup_Admin@2024.
+
+Password Hashing: Implements SHA256 + 128-bit Salt. Constant-time comparison is used to prevent timing attacks.
+
+Remember Me: Persists the username to remembered_user.txt across application restarts.
+
+Login Audit Log: Tracks all login events and failures in login_audit.txt.
+
+🏗️ Project Structure
+🛠️ Design Decisions
+Separation of Concerns: Validation and hashing logic are kept in helper classes, separate from UI code.
+
+Stateless Persistence: SessionState uses static dictionaries for temporary lockout tracking, while AuthService is designed to be easily swapped for a SQLite implementation.
+
+Coding Standards: Adheres to PascalCase for methods/classes and camelCase for local variables.
+
+Constants: Uses named constants for MaxAttempts and AdminPassword to avoid magic numbers.
