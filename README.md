@@ -14,7 +14,6 @@ No external NuGet packages required - hashing uses built-in System.Security.Cryp
 
 ====================================================
 TEST CREDENTIALS
-====================================================
 Username     | Password
 -------------|-------------
 admin        | Admin@246
@@ -27,7 +26,6 @@ Note: Passwords are stored as salted SHA256 hashes - plaintext is never stored.
 
 ====================================================
 FEATURES IMPLEMENTED
-====================================================
 
 CORE FEATURES:
 - Login Form with username/password fields
@@ -55,7 +53,7 @@ BONUS FEATURES:
 
 =================================================
 CODE STRUCTURE
-=================================================
+
 Program.cs           - Application entry point
 LoginForm.cs         - Main login UI and event handling
 DashboardForm.cs     - Post-login welcome screen
