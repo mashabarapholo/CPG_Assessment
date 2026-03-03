@@ -1,6 +1,7 @@
 # CPG_Assessment
 Capital Peak Group - C# Intern Development Test   Login Application - README
-====================================================
+
+# ====================================================
 
 HOW TO RUN
 ----------
@@ -12,7 +13,7 @@ HOW TO RUN
 Requirements: .NET Framework 4.7.2 (pre-installed on most Windows machines).
 No external NuGet packages required - hashing uses built-in System.Security.Cryptography.
 
-====================================================
+# ====================================================
 TEST CREDENTIALS
 Username     | Password
 -------------|-------------
@@ -24,7 +25,7 @@ Daniel       | Daniel@1
 Note: Passwords are CASE-SENSITIVE.
 Note: Passwords are stored as salted SHA256 hashes - plaintext is never stored.
 
-====================================================
+# ====================================================
 FEATURES IMPLEMENTED
 
 CORE FEATURES:
@@ -51,7 +52,7 @@ BONUS FEATURES:
 - [BONUS] Remember Me: Saves username to remembered_user.txt (persists restarts)
 - [BONUS] Login Audit Log: All events saved to login_audit.txt in the app folder
 
-=================================================
+# =================================================
 CODE STRUCTURE
 
 Program.cs           - Application entry point
@@ -67,9 +68,9 @@ RememberMeHelper.cs  - Saves/loads remembered username (Bonus)
 LoginApp.csproj      - Project configuration
 LoginApp.sln         - Visual Studio solution file
 
-====================================================
+# ====================================================
 DESIGN DECISIONS
-====================================================
+
 - Validation logic is kept in ValidationHelper.cs (separate from UI),
   following separation of concerns principle.
 - SessionState uses static dictionaries to maintain lockout state for
