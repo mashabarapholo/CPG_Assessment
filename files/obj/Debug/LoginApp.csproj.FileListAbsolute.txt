@@ -1,0 +1,10 @@
+C:\Users\Hp\Desktop\C# assessment\files\bin\Debug\LoginApp.exe
+C:\Users\Hp\Desktop\C# assessment\files\bin\Debug\LoginApp.pdb
+C:\Users\Hp\Desktop\C# assessment\files\obj\Debug\LoginApp.csproj.AssemblyReference.cache
+C:\Users\Hp\Desktop\C# assessment\files\obj\Debug\LoginApp.csproj.CoreCompileInputs.cache
+C:\Users\Hp\Desktop\C# assessment\files\obj\Debug\LoginApp.exe
+C:\Users\Hp\Desktop\C# assessment\files\obj\Debug\LoginApp.pdb
+C:\Users\Hp\Desktop\C# assessment\files\obj\Debug\LoginApp.AdminUnlockForm.resources
+C:\Users\Hp\Desktop\C# assessment\files\obj\Debug\LoginApp.csproj.GenerateResource.cache
+C:\Users\Hp\Desktop\C# assessment\files\obj\Debug\LoginApp.LoginForm.resources
+C:\Users\Hp\Desktop\C# assessment\files\obj\Debug\LoginApp.DashboardForm.resources

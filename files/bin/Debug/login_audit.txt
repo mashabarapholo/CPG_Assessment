@@ -1,0 +1,15 @@
+2026-03-03 15:10:45 | User: alice | Status: SUCCESS | Notes: Successful login
+2026-03-03 15:10:50 | User: alice | Status: SUCCESS | Notes: User logged out
+2026-03-03 15:11:17 | User: alice | Status: FAIL | Notes: Failed login – 2 attempts remaining
+2026-03-03 15:11:18 | User: alice | Status: FAIL | Notes: Failed login – 1 attempts remaining
+2026-03-03 15:11:19 | User: alice | Status: FAIL | Notes: Account locked after 3rd failed attempt
+2026-03-03 15:30:55 | User: alice | Status: SUCCESS | Notes: Successful login
+2026-03-03 15:30:58 | User: alice | Status: SUCCESS | Notes: User logged out
+2026-03-03 15:31:00 | User: alice | Status: SUCCESS | Notes: Successful login
+2026-03-03 15:31:06 | User: alice | Status: SUCCESS | Notes: User logged out
+2026-03-03 15:31:11 | User: alice | Status: FAIL | Notes: Failed login – 2 attempts remaining
+2026-03-03 15:31:12 | User: alice | Status: FAIL | Notes: Failed login – 1 attempts remaining
+2026-03-03 15:31:13 | User: alice | Status: FAIL | Notes: Account locked after 3rd failed attempt
+2026-03-03 15:33:03 | User: alice | Status: SUCCESS | Notes: Account unlocked by admin
+2026-03-03 15:33:28 | User: alice | Status: SUCCESS | Notes: Successful login
+2026-03-03 15:33:30 | User: alice | Status: SUCCESS | Notes: User logged out
